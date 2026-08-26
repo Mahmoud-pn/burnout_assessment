@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>مقياس الاحتراق الوظيفي | أثر</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background:
+        linear-gradient(
+          160deg,
+          #1d1640 0%,
+          #3c1b68 45%,
+          #5b287f 72%,
+          #8b315c 100%
+        );
+      min-height: 100vh;
+      color: #ffffff;
+      direction: rtl;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 760px;
+      margin: auto;
+      padding: 35px 0 60px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    .logo-circle {
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.10);
+      border: 2px solid rgba(255,255,255,0.25);
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+    }
+
+    .brand {
+      color: #f4c56c;
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #ded7eb;
+      line-height: 1.8;
+    }
+
+    .line {
+      width: 180px;
+      height: 4px;
+      border-radius: 20px;
+      background: linear-gradient(to left, #f4c56c, #d84968);
+      margin: 24px auto;
+    }
+
+    .dimensions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 25px 0 35px;
+    }
+
+    .dimension {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 12px 18px;
+      border-radius: 30px;
+      font-size: 15px;
+    }
+
+    .trainer-card,
+    .form-card {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 24px;
+      padding: 28px;
+      margin-bottom: 25px;
+      backdrop-filter: blur(8px);
+    }
+
+    .trainer-card {
+      text-align: center;
+    }
+
+    .trainer-name {
+      font-size: 21px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .trainer-title {
+      color: #d7cde3;
+      font-size: 15px;
+    }
+
+    .form-title {
+      color: #f4c56c;
+      font-size: 21px;
+      margin-bottom: 25px;
+    }
+
+    .field {
+      margin-bottom: 23px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    input {
+      width: 100%;
+      padding: 17px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.07);
+      color: white;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #c6b9cd;
+    }
+
+    input:focus {
+      border-color: #f4c56c;
+      background: rgba(255,255,255,0.11);
+    }
+
+    .notice {
+      background: rgba(255,255,255,0.07);
+      border-right: 4px solid #f4c56c;
+      padding: 17px;
+      border-radius: 12px;
+      margin: 25px 0;
+      line-height: 1.8;
+      color: #e8e0ef;
+      font-size: 14px;
+    }
+
+    .start-btn {
+      width: 100%;
+      border: none;
+      padding: 18px;
+      border-radius: 15px;
+      font-size: 19px;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(to left, #f3c66e, #df6f78);
+      color: #2b1641;
+      transition: 0.25s;
+    }
+
+    .start-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.20);
+    }
+
+    .error {
+      color: #ffd0d0;
+      font-size: 14px;
+      margin-top: 7px;
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .container {
+        width: 94%;
+      }
+
+      .trainer-card,
+      .form-card {
+        padding: 22px;
+      }
+
+      .dimension {
+        font-size: 14px;
+        padding: 10px 15px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <section class="hero">
+
+      <div class="logo-circle">
+        🦋
+      </div>
+
+      <div class="brand">
+        أثر للتطوير والوعي الشخصي
+      </div>
+
+      <h1>
+        مقياس الاحتراق الوظيفي
+      </h1>
+
+      <p class="subtitle">
+        أداة تقييم تفاعلية تساعدك على اكتشاف مستوى
+        الاستنزاف والتبلد والشعور بالكفاءة المهنية.
+      </p>
+
+      <div class="line"></div>
+
+      <div class="dimensions">
+
+        <div class="dimension">
+          🔴 الاستنزاف العاطفي
+        </div>
+
+        <div class="dimension">
+          🔵 التبلد والسلبية
+        </div>
+
+        <div class="dimension">
+          🟢 الكفاءة والإنجاز
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="trainer-card">
+
+      <div class="trainer-name">
+        أثر للتطوير والوعي الشخصي
+      </div>
+
+      <div class="trainer-title">
+        أداة تدريبية للتقييم الذاتي والوعي المهني
+      </div>
+
+    </section>
+
+
+    <section class="form-card">
+
+      <h2 class="form-title">
+        ✍️ أدخل بياناتك للبدء
+      </h2>
+
+
+      <div class="field">
+
+        <label for="fullName">
+          الاسم الكامل *
+        </label>
+
+        <input
+          id="fullName"
+          type="text"
+          placeholder="اكتب اسمك هنا..."
+        />
+
+        <div
+          class="error"
+          id="nameError"
+        >
+          الرجاء إدخال الاسم.
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <label for="jobTitle">
+          المسمى الوظيفي *
+        </label>
+
+        <input
+          id="jobTitle"
+          type="text"
+          placeholder="اكتب مسماك الوظيفي..."
+        />
+
+        <div
+          class="error"
+          id="jobError"
+        >
+          الرجاء إدخال المسمى الوظيفي.
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <label for="organization">
+          المؤسسة أو جهة العمل *
+        </label>
+
+        <input
+          id="organization"
+          type="text"
+          placeholder="اسم المؤسسة أو الجهة..."
+        />
+
+        <div
+          class="error"
+          id="organizationError"
+        >
+          الرجاء إدخال اسم المؤسسة.
+        </div>
+
+      </div>
+
+
+      <div class="notice">
+
+        <strong>
+          ملاحظة:
+        </strong>
+
+        هذه أداة تدريبية للتوعية والتقييم الذاتي،
+        مستوحاة من أبعاد الاحتراق الوظيفي،
+        وليست أداة تشخيص طبي ولا النسخة الرسمية من
+        Maslach Burnout Inventory.
+
+      </div>
+
+
+      <button
+        class="start-btn"
+        onclick="startAssessment()"
+      >
+        ابدأ التقييم ←
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    function startAssessment() {
+
+      const name =
+        document.getElementById("fullName").value.trim();
+
+      const job =
+        document.getElementById("jobTitle").value.trim();
+
+      const organization =
+        document.getElementById("organization").value.trim();
+
+
+      let valid = true;
+
+
+      document.getElementById("nameError").style.display =
+        "none";
+
+      document.getElementById("jobError").style.display =
+        "none";
+
+      document.getElementById("organizationError").style.display =
+        "none";
+
+
+      if (!name) {
+
+        document.getElementById("nameError").style.display =
+          "block";
+
+        valid = false;
+
+      }
+
+
+      if (!job) {
+
+        document.getElementById("jobError").style.display =
+          "block";
+
+        valid = false;
+
+      }
+
+
+      if (!organization) {
+
+        document.getElementById("organizationError").style.display =
+          "block";
+
+        valid = false;
+
+      }
+
+
+      if (!valid) {
+        return;
+      }
+
+
+      localStorage.setItem("participantName", name);
+
+      localStorage.setItem("participantJob", job);
+
+      localStorage.setItem(
+        "participantOrganization",
+        organization
+      );
+
+
+      alert(
+        "تم حفظ البيانات بنجاح ✅\n\nالخطوة التالية: أسئلة التقييم."
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>
